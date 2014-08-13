@@ -77,6 +77,8 @@ module.exports = function(grunt) {
                 files: [
                     { src: 'build/index.html', dest: 'dist/index.html' },
                     { src: 'src/bg.jpg',       dest: 'dist/bg.jpg' },
+                    { src: 'src/robots.txt',   dest: 'dist/robots.txt' },
+                    { src: 'src/humans.txt',   dest: 'dist/humans.txt' },
                 ]
             }
         },

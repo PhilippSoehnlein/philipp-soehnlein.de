@@ -3,13 +3,18 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Philipp Söhnlein @PhilSoehnlein
+
+# Github
+
+    https://github.com/PhilippSoehnlein/philipp-soehnlein.de
 
 # THANKS
 
-    <name>
+    My mum.
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Normalize.css
+    grunt
