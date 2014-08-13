@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/PhilippSoehlnein/philipp-soehnlein.de"
+    "url": "https://github.com/PhilippSoehnlein/philipp-soehnlein.de"
   },
   "devDependencies": {
     "grunt-autoprefixer": "^1.0.0",
