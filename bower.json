@@ -1,0 +1,20 @@
+{
+  "name": "philipp-soehnlein.de",
+  "authors": [
+    "Philipp Söhnlein <me@philipp-soehnlein.de>"
+  ],
+  "description": "Third party packages used by philipp-soehnlein.de",
+  "main": "index.html",
+  "homepage": "http://www.philipp-soehnlein.de",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.1"
+  }
+}
