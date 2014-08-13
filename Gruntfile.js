@@ -84,6 +84,22 @@ module.exports = function(grunt) {
         clean: {
             beforeBuild: ['build', 'dist'],
             afterBuild:  ['build'],
+        },
+
+        rsync: {
+            options: {
+                args: ['--verbose'],
+                exclude: [],
+                recursive: true,
+            },
+            prod: {
+                options: {
+                    host: process.env.PS_RSYNC_USER_AND_HOST,
+                    src:  'dist/',
+                    dest: '/home/phil/websites/philipp-soehnlein.de/htdocs',
+                    delete: true,
+                },
+            },
         }
     });
 
@@ -97,6 +113,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks("grunt-rsync")
 
     grunt.registerTask('build', [
         'clean:beforeBuild',
@@ -110,4 +127,6 @@ module.exports = function(grunt) {
         'copy',
         'clean:afterBuild',
     ]);
+
+    grunt.registerTask('deploy', ['build', 'rsync']);
 }
