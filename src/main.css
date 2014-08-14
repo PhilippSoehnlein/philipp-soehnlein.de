@@ -40,7 +40,7 @@ body {
 }
 
 .l-main--content-box {
-    max-width: calc( 36rem * 0.66 );
+    max-width: 380px; /* calc( 36rem * 0.66 ); TODO: convert to SASS, so can precalculate these values. */
     margin: 0 auto;
 }
 
