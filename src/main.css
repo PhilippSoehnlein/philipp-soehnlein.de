@@ -47,6 +47,7 @@ body {
 @media screen and (min-width: 800px) and (max-height: 800px) {
     .l-main--content {
         display: flex;
+        justify-content: center;
         max-width: none;
         margin: 0 5%;
     }
