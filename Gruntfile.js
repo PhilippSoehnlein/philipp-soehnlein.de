@@ -75,10 +75,12 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    { src: 'build/index.html', dest: 'dist/index.html' },
-                    { src: 'src/bg.jpg',       dest: 'dist/bg.jpg' },
-                    { src: 'src/robots.txt',   dest: 'dist/robots.txt' },
-                    { src: 'src/humans.txt',   dest: 'dist/humans.txt' },
+                    { src: 'build/index.html',                      dest: 'dist/index.html' },
+                    { src: 'src/bg.jpg',                            dest: 'dist/bg.jpg' },
+                    { src: 'src/favicon.png',                       dest: 'dist/favicon.png' },
+                    { src: 'src/apple-touch-icon-precomposed.png',  dest: 'dist/apple-touch-icon-precomposed.png' },
+                    { src: 'src/robots.txt',                        dest: 'dist/robots.txt' },
+                    { src: 'src/humans.txt',                        dest: 'dist/humans.txt' },
                 ]
             }
         },
