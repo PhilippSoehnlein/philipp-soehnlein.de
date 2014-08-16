@@ -81,6 +81,7 @@ module.exports = function(grunt) {
                     { src: 'src/apple-touch-icon-precomposed.png',  dest: 'dist/apple-touch-icon-precomposed.png' },
                     { src: 'src/robots.txt',                        dest: 'dist/robots.txt' },
                     { src: 'src/humans.txt',                        dest: 'dist/humans.txt' },
+                    { src: 'src/.htaccess',                         dest: 'dist/.htaccess' },
                 ]
             }
         },
