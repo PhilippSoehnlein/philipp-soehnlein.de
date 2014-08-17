@@ -1,3 +1,9 @@
+/**
+ * Available tasks:
+ *     - build: Builds an optimized version of the website
+ *     - deploy: Builds and deploys the website
+ *     - modernizr: Creates a custom modernizr build and stores it in src/modernizr.js
+ */
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -36,6 +42,9 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'build/all.css': ['build/index.html']
+                },
+                options: {
+                    ignore: [/\.flexbox(?:legacy)?\s+/]
                 }
             }
         },
@@ -73,7 +82,12 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            main: {
+            build: {
+                files: [
+                    { src: 'src/modernizr.js',                      dest: 'build/modernizr.js' },
+                ]
+            },
+            dist: {
                 files: [
                     { src: 'build/index.html',                      dest: 'dist/index.html' },
                     { src: 'src/bg.jpg',                            dest: 'dist/bg.jpg' },
@@ -105,6 +119,22 @@ module.exports = function(grunt) {
                     delete: true,
                 },
             },
+        },
+
+        modernizr: {
+            dist: {
+                devFile: 'remote',
+                outputFile: 'src/modernizr.js',
+                parseFiles: false,
+                tests: ['flexbox', 'flexboxlegacy'],
+                extra : {
+                    shiv: false,
+                    printshiv: false,
+                    load: false,
+                    mq: false,
+                    cssclasses: true
+                },
+            }
         }
     });
 
@@ -118,10 +148,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks("grunt-rsync")
+    grunt.loadNpmTasks("grunt-rsync");
+    grunt.loadNpmTasks("grunt-modernizr");
 
     grunt.registerTask('build', [
         'clean:beforeBuild',
+        'copy:build',
         'autoprefixer',
         'concat',
         'processhtml',
@@ -129,7 +161,7 @@ module.exports = function(grunt) {
         'cssmin',
         'inline',
         'htmlmin',
-        'copy',
+        'copy:dist',
         'clean:afterBuild',
     ]);
 
