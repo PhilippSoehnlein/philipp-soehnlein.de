@@ -48,7 +48,7 @@ body {
 @media screen and (min-width: 980px) and (max-height: 800px) {
     .l-main--content {
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center; /* for old Safari (Safari 5, iOS 5); See commit 169796e6b70680b72dea32183e894bdfd29467c9 (but doing "justify-content: center" is bad for IE10 & IE11 */
         max-width: none;
         margin: 0 5%;
     }
