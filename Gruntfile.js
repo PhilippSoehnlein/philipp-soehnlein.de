@@ -107,7 +107,7 @@ module.exports = function(grunt) {
 
         rsync: {
             options: {
-                args: ['--verbose'],
+                args: ['--verbose --checksum'],
                 exclude: [],
                 recursive: true,
             },
