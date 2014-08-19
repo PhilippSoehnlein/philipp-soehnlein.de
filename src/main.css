@@ -130,6 +130,7 @@ body {
     padding: 1rem;
     margin: 0;
 
+    background-color: #435B6E; /* fallback (IE8) */
     background-color: rgba(200, 200, 200, 0.1);
 }
 

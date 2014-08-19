@@ -16,6 +16,7 @@
     "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-inline": "^0.3.2",
     "grunt-modernizr": "^0.5.2",
+    "grunt-pixrem": "^0.1.2",
     "grunt-processhtml": "^0.3.3",
     "grunt-rsync": "^0.6.2",
     "grunt-uncss": "^0.3.5"

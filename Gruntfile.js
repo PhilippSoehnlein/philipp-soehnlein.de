@@ -59,6 +59,13 @@ module.exports = function(grunt) {
             }
         },
 
+        pixrem: {
+            dist: {
+                src: 'build/all.css',
+                dest: 'build/all.css'
+            }
+        },
+
         inline: {
             options:{
                 tag: '' // inline all the things!
@@ -128,7 +135,7 @@ module.exports = function(grunt) {
                 parseFiles: false,
                 tests: ['flexbox', 'flexboxlegacy'],
                 extra : {
-                    shiv: false,
+                    shiv: true,
                     printshiv: false,
                     load: false,
                     mq: false,
@@ -142,6 +149,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-pixrem');
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-inline');
@@ -159,6 +167,7 @@ module.exports = function(grunt) {
         'processhtml',
         'uncss',
         'cssmin',
+        'pixrem',
         'inline',
         'htmlmin',
         'copy:dist',
