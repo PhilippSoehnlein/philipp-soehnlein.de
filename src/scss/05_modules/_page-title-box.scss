@@ -1,3 +1,5 @@
+$title-font-size: 4rem;
+
 .page-title-box {
     text-align: center;
 }
@@ -5,7 +7,7 @@
 .page-title-box--title {
     margin: 0;
     padding: 0;
-    font-size: 4rem;
+    font-size: $title-font-size;
     font-family: "Lobster", cursive;
     font-weight: normal;
     text-shadow: 3px 3px 1px #76A1CC;
@@ -14,7 +16,7 @@
 @media screen and (max-width: 576px) {
     .page-title-box--title {
         /* shrink font for phones, to make sure the name fits without interfering the viewport scaling */
-        font-size: 3rem;
+        font-size: $title-font-size * 0.75;
     }
 }
 

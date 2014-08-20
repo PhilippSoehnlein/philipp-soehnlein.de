@@ -4,27 +4,28 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 .tagcloud--item {
     display: inline-block;
 }
 
-.tagcloud--link_level1,
-.tagcloud--link_level2,
-.tagcloud--link_level3 {
-    color: #DDD;
-    text-decoration: none;
+
+$max-link-levels: 3;
+
+@for $i from 1 through $max-link-levels {
+    .tagcloud--link_level#{$i} {
+        color: $softend-font-color;
+        text-decoration: none;
+    }
 }
 
-.tagcloud--link_level1:hover,
-.tagcloud--link_level1:focus,
-.tagcloud--link_level2:hover,
-.tagcloud--link_level2:focus,
-.tagcloud--link_level3:hover,
-.tagcloud--link_level3:focus {
-    text-decoration: underline;
+@for $i from 1 through $max-link-levels {
+    .tagcloud--link_level#{$i}:hover,
+    .tagcloud--link_level#{$i}:focus {
+        text-decoration: underline;
+    }
 }
 
 .tagcloud--link_level1 {

@@ -1,3 +1,5 @@
+$max-width: 36rem;
+
 .l-main {
     margin: 0;
     padding: 1rem;
@@ -7,11 +9,11 @@
     box-sizing: border-box;
     margin: auto;
     padding: 2rem;
-    max-width: 36rem;
+    max-width: $max-width;
 }
 
 .l-main--content-box {
-    max-width: 380px; /* calc( 36rem * 0.66 ); TODO: convert to SASS, so can precalculate these values. */
+    max-width: $max-width * 0.66;
     margin: 0 auto;
     overflow: hidden; /* IE11 needs that, otherwise the boxes will be left aligned instead of centered. */
 }
@@ -31,14 +33,16 @@
         flex-direction: column;
     }
 
+    $horizontal-margin: 5%;
+
     .flexbox .l-main--content-box:nth-child(even),
     .flexboxlegacy .l-main--content-box:nth-child(even) {
-        margin-left: 5%;
+        margin-left: $horizontal-margin;
     }
 
     .flexbox .l-main--content-box:nth-child(odd),
     .flexboxlegacy .l-main--content-box:nth-child(odd) {
-        margin-right: 5%;
+        margin-right: $horizontal-margin;
     }
 
     .flexbox .l-main--content-box-content,
