@@ -1,0 +1,20 @@
+.address {
+    box-sizing: border-box;
+    width: 100%; /* IE10 needs that, otherwise address lines will not wrap */
+
+    font-style: normal;
+    color: #DDD;
+    line-height: 1.7;
+}
+
+.address--component {
+    white-space: nowrap;
+}
+
+.address--component:after {
+    content: ' –'
+}
+
+.address--component:last-child:after {
+    content: '';
+}

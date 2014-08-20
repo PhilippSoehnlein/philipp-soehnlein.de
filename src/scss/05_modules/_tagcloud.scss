@@ -1,0 +1,45 @@
+.tagcloud {
+    box-sizing: border-box;
+    width: 100%; /* IE10 needs that, otherwise tagcloud lines will not wrap */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+
+.tagcloud--item {
+    display: inline-block;
+}
+
+.tagcloud--link_level1,
+.tagcloud--link_level2,
+.tagcloud--link_level3 {
+    color: #DDD;
+    text-decoration: none;
+}
+
+.tagcloud--link_level1:hover,
+.tagcloud--link_level1:focus,
+.tagcloud--link_level2:hover,
+.tagcloud--link_level2:focus,
+.tagcloud--link_level3:hover,
+.tagcloud--link_level3:focus {
+    text-decoration: underline;
+}
+
+.tagcloud--link_level1 {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.tagcloud--link_level2 {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.tagcloud--link_level3 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}

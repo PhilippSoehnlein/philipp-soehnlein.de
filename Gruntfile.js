@@ -13,12 +13,20 @@ module.exports = function(grunt) {
         //    tasks: ['jshint', 'qunit']
         //},
 
+        sass: {
+            build: {
+                files: {
+                    'build/main.css': 'src/main.scss'
+                }
+            }
+        },
+
         autoprefixer: {
             options: {
                 opbrowsers: ['last 2 version']
             },
             single_file: {
-                src: 'src/main.css',
+                src: 'build/main.css',
                 dest: 'build/main.css'
             },
         },
@@ -146,6 +154,7 @@ module.exports = function(grunt) {
     });
 
     //grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -162,6 +171,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'clean:beforeBuild',
         'copy:build',
+        'sass',
         'autoprefixer',
         'concat',
         'processhtml',

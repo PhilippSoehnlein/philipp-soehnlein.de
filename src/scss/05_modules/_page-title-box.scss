@@ -1,0 +1,33 @@
+.page-title-box {
+    text-align: center;
+}
+
+.page-title-box--title {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    font-family: "Lobster", cursive;
+    font-weight: normal;
+    text-shadow: 3px 3px 1px #76A1CC;
+}
+
+@media screen and (max-width: 576px) {
+    .page-title-box--title {
+        /* shrink font for phones, to make sure the name fits without interfering the viewport scaling */
+        font-size: 3rem;
+    }
+}
+
+.page-title-box--title-word-first-letter {
+    font-size: 120%;
+}
+
+.page-title-box--tagline {
+    margin: 2rem 0 0 0;
+    padding: 2rem 0 0 0;
+    border-top: 2px solid #8D0803;
+
+    color: #DDD; /* TODO: harmonize colors */
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
